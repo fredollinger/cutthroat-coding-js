@@ -10,6 +10,6 @@ describe('Select Sort', function() {
     it('should sort an array', function(){
       var arr = cloneDeep(array.unsorted1);
       sorting.SelectSort(arr);
-      assert.equal(array.isEqual(array.sorted1, arr), true);
+      assert.equal(sorting.AreArraysEqual(array.sorted1, arr), true);
     });
 });

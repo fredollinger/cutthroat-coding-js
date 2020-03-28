@@ -1,3 +1,13 @@
+// Tell if two arrays are equal
+function AreArraysEqual(arr1, arr2) {
+    var i;
+    for (i = 0; i < arr1.length; i++) {
+        if (arr1[i] != arr2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
 // Given an array, arr, find the index of the lowest element
 function getLowestIndex(start, arr) {
     lowestIndex = start;
@@ -28,7 +38,10 @@ function SelectSort(arr) {
     return arr;
 }
 
-module.exports.SelectSort = SelectSort;
+module.exports = {
+    SelectSort,
+    AreArraysEqual
+}
 
 /* Test function. Remove after we prove this works. */
 exports.printMsg = function() {
