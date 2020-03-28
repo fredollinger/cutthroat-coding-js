@@ -29,3 +29,8 @@ function SelectSort(arr) {
 }
 
 module.exports.SelectSort = SelectSort;
+
+/* Test function. Remove after we prove this works. */
+exports.printMsg = function() {
+  console.log("This is a message from the demo package");
+}

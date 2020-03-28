@@ -4,7 +4,7 @@ var cloneDeep = require('lodash.clonedeep');
 
 // Local requires
 var array = require('./array.js');
-var sorting = require('./sorting.js');
+var sorting = require('./index.js');
 
 describe('Select Sort', function() {
     it('should sort an array', function(){
