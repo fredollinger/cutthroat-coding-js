@@ -1,6 +1,6 @@
 {
   "name": "cutthroat-coding",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Concise implementations of common data structures and algorithms (DS&As) in JS. Clone of work by Lareine Jeng.",
   "main": "index.js",
   "dependencies": {
