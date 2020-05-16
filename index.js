@@ -1,5 +1,11 @@
 // Tell if two arrays are equal
 function AreArraysEqual(arr1, arr2) {
+    if (0 == arr1.length && 0 == arr2.length) {
+	    return true
+    }
+    if (0 == arr1.length || 0 == arr2.length) {
+        return false;
+    }
     var i;
     for (i = 0; i < arr1.length; i++) {
         if (arr1[i] != arr2[i]) {

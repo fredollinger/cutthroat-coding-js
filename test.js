@@ -13,3 +13,27 @@ describe('Select Sort', function() {
       assert.equal(sorting.AreArraysEqual(array.sorted1, arr), true);
     });
 });
+
+describe('AreArraysEqual', function() {
+    it('check empty array1', function(){
+      var arr1 = [];
+      var arr2 = [0, 1 ,2];
+      assert.equal(sorting.AreArraysEqual(arr1, arr2), false);
+    });
+});
+
+describe('AreArraysEqual', function() {
+    it('check empty array2', function(){
+      var arr1 = [0, 1 ,2];
+      var arr2 = [];
+      assert.equal(sorting.AreArraysEqual(arr1, arr2), false);
+    });
+});
+
+describe('AreArraysEqual', function() {
+    it('check both empty arrays', function(){
+      var arr1 = [];
+      var arr2 = [];
+      assert.equal(sorting.AreArraysEqual(arr1, arr2), true);
+    });
+});
