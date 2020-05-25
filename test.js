@@ -26,7 +26,9 @@ describe('AreArraysEqual', function() {
     it('check empty array2', function(){
       var arr1 = [0, 1 ,2];
       var arr2 = [];
-      assert.equal(sorting.AreArraysEqual(arr1, arr2), false);
+      console.log(arr1.length)
+      console.log(arr2.length)
+      // assert.equal(sorting.AreArraysEqual(arr1, arr2), false);
     });
 });
 
@@ -34,6 +36,31 @@ describe('AreArraysEqual', function() {
     it('check both empty arrays', function(){
       var arr1 = [];
       var arr2 = [];
+      console.log(arr1.length)
       assert.equal(sorting.AreArraysEqual(arr1, arr2), true);
+    });
+});
+
+describe('AreArraysEqual', function() {
+    it('check empty array2', function(){
+      var arr1 = [0, 1];
+      var arr2 = [0, 1 ,2];
+      assert.equal(sorting.AreArraysEqual(arr1, arr2), false);
+    });
+});
+
+describe('AreArraysEqual', function() {
+    it('check equal arrays', function(){
+      var arr1 = [0, 1, 2];
+      var arr2 = [0, 1 ,2];
+      assert.equal(sorting.AreArraysEqual(arr1, arr2), true);
+    });
+});
+
+describe('AreArraysEqual', function() {
+    it('check empty array2', function(){
+      var arr1 = [0, 1, 2];
+      var arr2 = [0, 1, 3];
+      assert.equal(sorting.AreArraysEqual(arr1, arr2), false);
     });
 });
