@@ -4,6 +4,7 @@ var cloneDeep = require('lodash.clonedeep');
 
 // Local requires
 var array = require('./array.js');
+var strings = require('./strings.js');
 var sorting = require('./index.js');
 
 describe('Select Sort', function() {
@@ -62,5 +63,13 @@ describe('AreArraysEqual', function() {
       var arr1 = [0, 1, 2];
       var arr2 = [0, 1, 3];
       assert.equal(sorting.AreArraysEqual(arr1, arr2), false);
+    });
+});
+
+describe('CamelCaseFunction', function() {
+    it('strings are equal', function(){
+      var before1 = "the-stealth-warrior";
+      var expected1 = "theStealthWarrior";
+      assert.equal(strings.CamelCase(before1), expected1);
     });
 });
