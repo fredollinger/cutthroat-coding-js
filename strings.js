@@ -9,7 +9,6 @@ function CamelCase(str) {
         else {
             res = res + str.charAt(i);
         }
-        console.log(str.charAt(i));
     };
 
     return res;

@@ -10,7 +10,6 @@ function AreArraysEqual(arr1, arr2) {
 
     var i;
     for (i = 0; i < arr1.length; i++) {
-        console.log(arr1[i]);
         if (arr1[i] != arr2[i]) {
             return false;
         }
