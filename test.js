@@ -5,6 +5,7 @@ var cloneDeep = require('lodash.clonedeep');
 // Local requires
 var array = require('./array.js');
 var strings = require('./strings.js');
+var cutmath = require('./cutmath.js');
 var sorting = require('./index.js');
 
 describe('Select Sort', function() {
@@ -68,5 +69,12 @@ describe('CamelCaseFunction', function() {
       var before1 = "the-stealth-warrior";
       var expected1 = "theStealthWarrior";
       assert.equal(strings.CamelCase(before1), expected1);
+    });
+});
+
+describe('FibonacciSequence', function() {
+    it('calculate Fibonacci Sequence', function() {
+	// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+      assert.equal(cutmath.FibonacciSequence(0), 0);
     });
 });
