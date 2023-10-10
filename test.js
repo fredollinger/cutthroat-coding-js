@@ -75,7 +75,8 @@ describe('CamelCaseFunction', function() {
 describe('FibonacciSequence', function() {
     it('calculate Fibonacci Sequence', function() {
 	    const fibs = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
-      assert.equal(cutmath.FibonacciSequence(0), 0);
-      fibs.forEach((i) => console.log(i, cutmath.FibonacciSequence(i)));
+      for (let i = 0; i < fibs.length; i++) {
+        assert.equal(fibs[i], cutmath.FibonacciSequence(i));
+      }
     });
 });
