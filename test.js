@@ -80,3 +80,21 @@ describe('FibonacciSequence', function() {
       }
     });
 });
+
+// https://leetcode.com/problems/two-sum/
+describe('TwoSum', function() {
+    it('Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.', function(){
+        var target = 9;
+        var nums = [2,7,11,15];
+        var output = [1,0];
+	      var actual = cutmath.twoSum(nums, target);
+    });
+});
+
+
+https://leetcode.com/problems/roman-to-integer/description/
+describe('RomanToInteger', function() {
+    it('Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.', function(){
+        cutmath.romanToInteger("III");
+    });
+});
