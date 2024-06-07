@@ -6,6 +6,7 @@ var cloneDeep = require('lodash.clonedeep');
 var array = require('./array.js');
 var strings = require('./strings.js');
 var cutmath = require('./cutmath.js');
+var leetcode = require('./leetcode.js');
 var sorting = require('./index.js');
 
 describe('Select Sort', function() {
@@ -94,7 +95,13 @@ describe('TwoSum', function() {
 
 https://leetcode.com/problems/roman-to-integer/description/
 describe('RomanToInteger', function() {
+    const d = {};
+    d["III"] = 3;
+    // d["LVIII"] = 58;
+    // d["MCMXCIV"] = 1994;
     it('Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.', function(){
-        cutmath.romanToInteger("III");
+        for (var key in d) {
+            assert.equal(d[key], leetcode.romanToInteger(key));
+	}
     });
 });
