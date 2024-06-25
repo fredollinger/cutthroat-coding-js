@@ -92,13 +92,22 @@ describe('TwoSum', function() {
     });
 });
 
+describe('IsRomanHigher', function() {
+    it('Test code to check to see if a Roman numeral is lower then the one before and thus needs to be subtracted and not added.', function(){
+        assert.equal(false, leetcode.isRomanLower("VI"));
+        assert.equal(true, leetcode.isRomanLower("IV"));
+        assert.equal(false, leetcode.isRomanLower("XV"));
+        assert.equal(true, leetcode.isRomanLower("VX"));
+    });
+});
 
 https://leetcode.com/problems/roman-to-integer/description/
 describe('RomanToInteger', function() {
     const d = {};
     d["III"] = 3;
-    // d["LVIII"] = 58;
-    // d["MCMXCIV"] = 1994;
+    d["IV"] = 4;
+    d["LVIII"] = 58;
+    d["MCMXCIV"] = 1994;
     it('Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.', function(){
         for (var key in d) {
             assert.equal(d[key], leetcode.romanToInteger(key));
