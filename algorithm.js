@@ -30,7 +30,12 @@ function binarySearch(arr, item){
 	    throw new Error("Should never get here");
 	}
     }
-    return mid;
+    return res;
+}
+
+function binarySearch1(arr, item){
+    var res = -1;
+    return res;
 }
 
 function bruteForceSearch(arr, item){
@@ -45,5 +50,6 @@ function bruteForceSearch(arr, item){
 
 module.exports = {
     binarySearch,
+    binarySearch1,
     bruteForceSearch
 }
