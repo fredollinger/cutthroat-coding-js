@@ -2,21 +2,27 @@ function binarySearch(arr, item){
     var low = 0;
     var high = arr.length;
     var mid = (high - low) / 2;
+    var res = -1;
     while (low < high) {
-	console.log("low: " + low + " mid: " + mid + " high: " + high);
+	mid = Math.floor(mid)
         if (arr[mid] == item )
         {
+	    res = arr[mid];
             break;
         }
         else if (item > arr[mid])
         {
-            low = mid;
-            mid = low + (high - low) / 2;
+	    console.log("item: " + item + " low: " + low + " mid: " + mid + " high: " + high);
+            low = mid + 1;
+            mid = (high + low) / 2;
+	    console.log("mid: " + mid);
         }
         else if (item < arr[mid])
         {
-            high = mid;
-            mid = (high - low) / 2;
+	    console.log("item: " + item + " low: " + low + " mid: " + mid + " high: " + high);
+            high = mid - 1;
+            mid = (high + low) / 2;
+	    console.log("mid: " + mid);
         }
 	else {
 	    console.log("arr[mid]: " + arr[mid]);

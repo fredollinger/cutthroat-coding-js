@@ -118,15 +118,6 @@ describe('RomanToInteger', function() {
     */
 });
 
-describe('BinarySearch', function() {
-    const arr = [];
-    for (i = 0; i <= 100; i++) {
-        arr[i] = i * 5;
-    }
-    // console.log(arr);
-});
-
-
 describe('BruteForceSearch', function() {
     const arr = [];
     for (i = 0; i <= 100; i++) {
@@ -138,3 +129,15 @@ describe('BruteForceSearch', function() {
     // case where the item is not found
     assert.equal(-1, algorithm.bruteForceSearch(arr, 51));
 });
+
+describe('BinarySearch', function() {
+    const arr = [];
+    for (i = 0; i <= 6; i++) {
+        arr[i] = i;
+    }
+    var res = algorithm.binarySearch(arr, 6);
+    assert.equal(6, arr[res]);
+    // case where the item is not found
+    assert.equal(algorithm.binarySearch(arr, 6.5), -1);
+});
+
