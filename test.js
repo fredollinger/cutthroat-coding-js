@@ -139,5 +139,6 @@ describe('BinarySearch', function() {
     assert.equal(6, arr[res]);
     // case where the item is not found
     assert.equal(algorithm.binarySearch(arr, 6.5), -1);
+    assert.equal(algorithm.binarySearch(arr, 51), -1);
 });
 
