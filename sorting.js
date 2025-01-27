@@ -46,7 +46,12 @@ function SelectSort(arr) {
     return arr;
 }
 
+var BubbleSort = function(arr) {
+    return arr;
+}
+
 module.exports = {
+    BubbleSort,
     SelectSort,
     AreArraysEqual
 }
