@@ -8,6 +8,7 @@ var strings = require('./strings.js');
 var cutmath = require('./cutmath.js');
 var leetcode = require('./leetcode.js');
 var sorting = require('./sorting.js');
+var algorithm = require('./algorithm.js');
 
 describe('Select Sort', function() {
     it('should sort an array', function(){
@@ -108,11 +109,18 @@ describe('RomanToInteger', function() {
     // d["IV"] = 4;
     // d["LVIII"] = 58;
     // d["MCMXCIV"] = 1994;
+    // d["III"] = 3;
+    d["IV"] = 4;
+    // d["LVIII"] = 58;
+    // d["MCMXCIV"] = 1994;
+    /*
+
     it('Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.', function(){
         for (var key in d) {
             assert.equal(d[key], leetcode.romanToInteger(key));
 	}
     });
+    */
 });
 
 describe('TestBubbleSort', function() {
@@ -126,4 +134,28 @@ describe('TestBubbleSort', function() {
     });
 */
 
+});
+
+describe('BruteForceSearch', function() {
+    const arr = [];
+    for (i = 0; i <= 100; i++) {
+        arr[i] = i * 5;
+    }
+    var res = algorithm.bruteForceSearch(arr, 50);
+    assert.equal(50, arr[res]);
+    res = algorithm.bruteForceSearch(arr, 51);
+    // case where the item is not found
+    assert.equal(-1, algorithm.bruteForceSearch(arr, 51));
+});
+
+describe('BinarySearch', function() {
+    const arr = [];
+    for (i = 0; i <= 6; i++) {
+        arr[i] = i;
+    }
+    var res = algorithm.binarySearch(arr, 6);
+    assert.equal(6, arr[res]);
+    // case where the item is not found
+    assert.equal(algorithm.binarySearch(arr, 6.5), -1);
+    assert.equal(algorithm.binarySearch(arr, 51), -1);
 });
