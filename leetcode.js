@@ -32,22 +32,21 @@ var romanToInteger = function(s) {
         // If the next numeral is lower than the one before, we need to 
         // subtract its value from the total.
         console.log(i + "/" + s[i]);
+        // always add the last one
+        if (s.length - 1 == i) {
+            res += roman[s[i]];
+        }
         if (i > 0 && isRomanLower(s[i-1] + s[i])) {
-            // console.log(s[i] + s[i+1]);
+            console.log(s[i] + s[i+1]);
             res = roman[s[i]] - res;
         }
         else {
             res = res + roman[s[i]];
         }
-        /*
-        if (isRomanLower(s[i] + s[i-1])) {
-            res = res + (roman[s[i]] - roman[s[i+1]]);
+        console.log(res);
+        if (s.length - i > 1) {
+            i++;
         }
-        // Otherwise, add it.
-        else {
-            res = res + roman[s[i]];
-        }
-        */
     }
     console.log(res);
     return res; 
