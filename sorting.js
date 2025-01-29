@@ -47,6 +47,26 @@ function SelectSort(arr) {
 }
 
 var BubbleSort = function(arr) {
+    var done = false;
+    var i = 0;
+    var c = 0;
+    while(!done) {
+        done = true;
+        i = 0;
+        for(i = 0; i < arr.length - 1; i++) {
+            console.log("LOOP: " + c + ": " + i);
+            // if the 1st is bigger than the 2nd element, swap them
+            if (arr[i] > arr[i+1]) {
+                var tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i+1] = tmp
+                done = false;
+                console.log(i + ": " + arr[i] + ">" + arr[i+1]);
+            }
+            console.log("loops: " + c + ": " + arr);
+        }
+        c = c + 1;
+    }
     return arr;
 }
 

@@ -9,6 +9,7 @@ var cutmath = require('./cutmath.js');
 var leetcode = require('./leetcode.js');
 var sorting = require('./sorting.js');
 var algorithm = require('./algorithm.js');
+var helper = require('./helper.js');
 
 describe('Select Sort', function() {
     it('should sort an array', function(){
@@ -123,19 +124,6 @@ describe('RomanToInteger', function() {
     */
 });
 
-describe('TestBubbleSort', function() {
-    var arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
-    var correct = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    res = sorting.BubbleSort(arr);
-
-/*
-    it('Bubble Sort', function(){
-        assert.equal(res, correct);
-    });
-*/
-
-});
-
 describe('BruteForceSearch', function() {
     const arr = [];
     for (i = 0; i <= 100; i++) {
@@ -158,4 +146,14 @@ describe('BinarySearch', function() {
     // case where the item is not found
     assert.equal(algorithm.binarySearch(arr, 6.5), -1);
     assert.equal(algorithm.binarySearch(arr, 51), -1);
+});
+
+describe('TestBubbleSort', function() {
+    var arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+    var expected = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    res = sorting.BubbleSort(arr);
+
+    it('Bubble Sort', function(){
+        assert.true(helper.ArraysAreEqual(res, expected));
+    });
 });
