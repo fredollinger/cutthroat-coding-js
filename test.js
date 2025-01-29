@@ -154,6 +154,16 @@ describe('TestBubbleSort', function() {
     res = sorting.BubbleSort(arr);
 
     it('Bubble Sort', function(){
-        assert.true(helper.ArraysAreEqual(res, expected));
+        assert(helper.ArraysAreEqual(res, expected));
+    });
+});
+
+describe('TestBubbleSort2', function() {
+    var arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+    var expected = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    res = sorting.BubbleSort(arr);
+
+    it('Bubble Sort2', function(){
+        assert(helper.ArraysAreEqual(res, expected));
     });
 });

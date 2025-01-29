@@ -1,3 +1,19 @@
+var BubbleSort2 = function(arr) {
+    var done = true;
+    while(!done) {
+        var i;
+        for(i = 0; i < arr.length -1; i++) {
+            if (arr[i] > arr[i+1]) {
+                var tmp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i] = tmp;
+                done = false;
+            }
+        }
+    }
+    return arr;
+}
+
 // Tell if two arrays are equal
 function AreArraysEqual(arr1, arr2) {
     if (null == arr1 || null == arr2) {
@@ -72,6 +88,7 @@ var BubbleSort = function(arr) {
 
 module.exports = {
     BubbleSort,
+    BubbleSort2,
     SelectSort,
     AreArraysEqual
 }
