@@ -70,7 +70,6 @@ var BubbleSort = function(arr) {
         done = true;
         i = 0;
         for(i = 0; i < arr.length - 1; i++) {
-            console.log("LOOP: " + c + ": " + i);
             // if the 1st is bigger than the 2nd element, swap them
             if (arr[i] > arr[i+1]) {
                 var tmp = arr[i];
@@ -79,9 +78,24 @@ var BubbleSort = function(arr) {
                 done = false;
                 console.log(i + ": " + arr[i] + ">" + arr[i+1]);
             }
-            console.log("loops: " + c + ": " + arr);
         }
         c = c + 1;
+    }
+    return arr;
+}
+
+function SelectSort2(arr) {
+    var i;
+    var j;
+    var tmp;
+    for(i =0; i < arr.length - 1; i++) {
+        for(j = i; j < arr.length; j++) {
+            if (arr[i] > arr[j]) {
+                tmp = arr[i]; 
+ 		        arr[i] = arr[j];
+ 		        arr[j] = tmp;
+            }
+        }
     }
     return arr;
 }
@@ -90,6 +104,7 @@ module.exports = {
     BubbleSort,
     BubbleSort2,
     SelectSort,
+    SelectSort2,
     AreArraysEqual
 }
 
