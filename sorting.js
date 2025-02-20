@@ -1,3 +1,22 @@
+function InsertSort(arr) {
+    var i, j, pos, tmp;
+    for(i=1; i < arr.length; i++){
+        tmp = arr[i];
+        pos = i - 1;
+        while (pos >= 0) {
+            if (arr[pos] > tmp) {
+                arr[pos + 1] = arr[pos];
+                pos = pos - 1;
+            }
+            else {
+                break;
+            }
+            arr[pos + 1] = tmp;
+        }
+    }
+    return arr;
+}
+
 var BubbleSort2 = function(arr) {
     var done = true;
     while(!done) {
@@ -76,7 +95,6 @@ var BubbleSort = function(arr) {
                 arr[i] = arr[i + 1];
                 arr[i+1] = tmp
                 done = false;
-                console.log(i + ": " + arr[i] + ">" + arr[i+1]);
             }
         }
         c = c + 1;
@@ -100,11 +118,36 @@ function SelectSort2(arr) {
     return arr;
 }
 
+function InsertSort2(arr) {
+    var i, pos, tmp;
+    for (i = 1; i < arr.length; i++){
+        tmp = arr[i];
+        pos = i - 1;
+        console.log("insert sort 2 pos: " + pos);
+        console.log("insert sort 2 arr: " + arr);
+        while(pos >= 0) {
+            if (arr[pos] > tmp) {
+                arr[pos + 1] = arr[pos];
+                pos = pos - 1;
+            }
+            else {
+                console.log("insert sort 2 break: " + arr[pos] + " < " + tmp);
+                break;
+	    }
+        }
+        console.log("insert sort 2 arr[pos]: " + (pos + 1) + " = " + tmp);
+	arr[pos + 1] = tmp;
+    }
+    return arr;
+}
+
 module.exports = {
     BubbleSort,
     BubbleSort2,
     SelectSort,
     SelectSort2,
+    InsertSort,
+    InsertSort2,
     AreArraysEqual
 }
 
