@@ -177,3 +177,49 @@ describe('TestSelectSort2', function() {
         assert(helper.ArraysAreEqual(res, expected));
     });
 });
+
+describe('TestInsertSort', function() {
+    var arr = [4, 2, 7, 1, 3];
+    var expected = [ 1, 2, 3, 4, 7 ];
+    var res = sorting.InsertSort(arr);
+
+    it('Insert Sort', function(){
+        assert(helper.ArraysAreEqual(res, res));
+    });
+
+});
+
+describe('TestInsertSort2', function() {
+    var arr = [4, 2, 7, 1, 3];
+    var expected = [ 1, 2, 3, 4, 7 ];
+    var res = sorting.InsertSort2(arr);
+
+    it('Insert Sort 2', function(){
+        assert(helper.ArraysAreEqual(res, expected));
+    });
+
+});
+
+describe('TestInsertSort3', function() {
+    var arr = [4, 2, 7, 1, 3];
+    var expected = [ 1, 2, 3, 4, 7 ];
+    var res = sorting.InsertSort3(arr);
+    console.log("TestInsert3: " + res);
+
+    it('Insert Sort 3', function(){
+        assert(helper.ArraysAreEqual(res, expected));
+    });
+
+});
+
+describe('TestInsertSort4', function() {
+    var arr = [4, 2, 7, 1, 3];
+    var expected = [ 1, 2, 3, 4, 7 ];
+    var res = sorting.InsertSort4(arr);
+    console.log("TestInsert3: " + res);
+
+    it('Insert Sort 4', function(){
+        assert(helper.ArraysAreEqual(res, expected));
+    });
+
+});

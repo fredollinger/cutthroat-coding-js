@@ -1,19 +1,4 @@
-function InsertSort(arr) {
-    var i, j, pos, tmp;
-    for(i=1; i < arr.length; i++){
-        tmp = arr[i];
-        pos = i - 1;
-        while (pos >= 0) {
-            if (arr[pos] > tmp) {
-                arr[pos + 1] = arr[pos];
-                pos = pos - 1;
-            }
-            else {
-                break;
-            }
-            arr[pos + 1] = tmp;
-        }
-    }
+function InsertSort4(arr) {
     return arr;
 }
 
@@ -28,6 +13,25 @@ var BubbleSort2 = function(arr) {
                 arr[i] = tmp;
                 done = false;
             }
+        }
+    }
+    return arr;
+}
+
+function InsertSort(arr) {
+    var i, j, pos, tmp;
+    for(i=1; i < arr.length; i++){
+        tmp = arr[i];
+        pos = i - 1;
+        while (pos >= 0) {
+            if (arr[pos] > tmp) {
+                arr[pos + 1] = arr[pos];
+                pos = pos - 1;
+            }
+            else {
+                break;
+            }
+            arr[pos + 1] = tmp;
         }
     }
     return arr;
@@ -150,7 +154,6 @@ function InsertSort3(arr) {
             pos = pos - 1;
         }
         arr[pos + 1] = tmp;
-        console.log("InsertSort3: " + arr)
     }
     return arr;
 }
@@ -163,6 +166,7 @@ module.exports = {
     InsertSort,
     InsertSort2,
     InsertSort3,
+    InsertSort4,
     AreArraysEqual
 }
 
