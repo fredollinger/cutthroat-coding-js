@@ -123,20 +123,36 @@ function InsertSort2(arr) {
     for (i = 1; i < arr.length; i++){
         tmp = arr[i];
         pos = i - 1;
-        console.log("insert sort 2 pos: " + pos);
-        console.log("insert sort 2 arr: " + arr);
         while(pos >= 0) {
             if (arr[pos] > tmp) {
                 arr[pos + 1] = arr[pos];
                 pos = pos - 1;
             }
             else {
-                console.log("insert sort 2 break: " + arr[pos] + " < " + tmp);
                 break;
 	    }
         }
-        console.log("insert sort 2 arr[pos]: " + (pos + 1) + " = " + tmp);
 	arr[pos + 1] = tmp;
+    }
+    return arr;
+}
+
+function InsertSort3(arr) {
+    var i, pos, tmp;
+    for (i = 1; i < arr.length; i++) {
+        pos = i - 1;
+        tmp = arr[i];
+        while(pos >= 0) {
+            if (arr[pos] > tmp) {
+                arr[pos + 1] = arr[pos];
+                pos = pos - 1;
+            }
+            else {
+                break;
+            }
+        }
+        arr[pos + 1] = tmp;
+        console.log("InsertSort3: " + arr)
     }
     return arr;
 }
@@ -148,6 +164,7 @@ module.exports = {
     SelectSort2,
     InsertSort,
     InsertSort2,
+    InsertSort3,
     AreArraysEqual
 }
 
