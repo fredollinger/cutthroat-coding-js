@@ -143,13 +143,11 @@ function InsertSort3(arr) {
         pos = i - 1;
         tmp = arr[i];
         while(pos >= 0) {
-            if (arr[pos] > tmp) {
-                arr[pos + 1] = arr[pos];
-                pos = pos - 1;
+            if (arr[pos] < tmp) {
+		break;
             }
-            else {
-                break;
-            }
+            arr[pos + 1] = arr[pos];
+            pos = pos - 1;
         }
         arr[pos + 1] = tmp;
         console.log("InsertSort3: " + arr)
