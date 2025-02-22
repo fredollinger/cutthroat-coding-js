@@ -3,17 +3,14 @@ function InsertSort4(arr) {
     for (i = 1; i < arr.length; i++) {
         pos = i -1;
         tmp = arr[i];
-        console.log("i: " + i + " tmp: " + tmp);
         while(pos >= 0) {
             if (arr[pos] < tmp) {
-                console.log("Break 4: " + arr[pos - 1] + " < " + tmp);
                 break;
             }
             arr[pos + 1] = arr[pos];
             pos = pos - 1;
         }
         arr[pos + 1] = tmp;
-        console.log("Insert Sort 4: " + arr)
     }
     return arr;
 }
@@ -122,22 +119,6 @@ var BubbleSort = function(arr) {
     return arr;
 }
 
-function SelectSort2(arr) {
-    var i;
-    var j;
-    var tmp;
-    for(i =0; i < arr.length - 1; i++) {
-        for(j = i; j < arr.length; j++) {
-            if (arr[i] > arr[j]) {
-                tmp = arr[i]; 
- 		        arr[i] = arr[j];
- 		        arr[j] = tmp;
-            }
-        }
-    }
-    return arr;
-}
-
 function InsertSort2(arr) {
     var i, pos, tmp;
     for (i = 1; i < arr.length; i++){
@@ -174,6 +155,41 @@ function InsertSort3(arr) {
     return arr;
 }
 
+function SelectSort2(arr) {
+    var i;
+    var j;
+    var tmp;
+    for(i =0; i < arr.length - 1; i++) {
+        for(j = i; j < arr.length; j++) {
+            if (arr[i] > arr[j]) {
+                tmp = arr[i]; 
+ 		        arr[i] = arr[j];
+ 		        arr[j] = tmp;
+            }
+        }
+    }
+    return arr;
+}
+
+function InsertSort5(arr) {
+    var i, pos;
+    for (i = 1; i < arr.length; i++) {
+        tmp = arr[i];
+        pos = i;
+        while(pos >= 0) {
+            if (arr[pos] < tmp) {
+                break;
+            }
+            console.log("pos: " + pos)
+            console.log("arr: " + arr);
+            arr[pos] = arr[pos - 1];
+            pos = pos - 1;
+        }
+        arr[pos + 1] = tmp;
+    }
+    return arr;
+}
+
 module.exports = {
     BubbleSort,
     BubbleSort2,
@@ -183,6 +199,7 @@ module.exports = {
     InsertSort2,
     InsertSort3,
     InsertSort4,
+    InsertSort5,
     AreArraysEqual
 }
 
