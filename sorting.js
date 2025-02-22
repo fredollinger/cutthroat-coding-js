@@ -1,4 +1,20 @@
 function InsertSort4(arr) {
+    var i, pos;
+    for (i = 1; i < arr.length; i++) {
+        pos = i -1;
+        tmp = arr[i];
+        console.log("i: " + i + " tmp: " + tmp);
+        while(pos >= 0) {
+            if (arr[pos] < tmp) {
+                console.log("Break 4: " + arr[pos - 1] + " < " + tmp);
+                break;
+            }
+            arr[pos + 1] = arr[pos];
+            pos = pos - 1;
+        }
+        arr[pos + 1] = tmp;
+        console.log("Insert Sort 4: " + arr)
+    }
     return arr;
 }
 
@@ -148,7 +164,7 @@ function InsertSort3(arr) {
         tmp = arr[i];
         while(pos >= 0) {
             if (arr[pos] < tmp) {
-		break;
+		        break;
             }
             arr[pos + 1] = arr[pos];
             pos = pos - 1;
