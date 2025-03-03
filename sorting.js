@@ -192,9 +192,27 @@ var BubbleSort = function(arr) {
 
 var InsertSort6 = function(arr) {
     // var i; tmp, gap;
-    var i;
-    for (i = 1; i < arr.length; i++) {
-        console.log("i: " + i + " arr: " + arr[i]);
+    var i, gap, tmp;
+    var len = arr.length;
+    for (i = 1; i < len; i++) {
+        gap = i - 1;
+        tmp = arr[i];
+        console.log("i: " + i + " tmp: " + tmp + " arr: " + arr);
+        while(gap >= 0) {
+            // if the number in the gap is lower than our current
+            // tmp then break because we are all ready sorted at this point.
+            if (arr[gap] < tmp) {
+                break;
+            }
+            // move the number in the gap over one the the right
+            arr[gap + 1] = arr[gap];
+	    gap = gap - 1;
+        }
+
+        console.log("gap: " + gap);
+        console.log("tmp: " + tmp);
+        // console.log("arr: " + arr);
+        arr[gap + 1] = tmp;
     }
     return arr;
 }
