@@ -169,27 +169,6 @@ function InsertSort5(arr) {
     return arr;
 }
 
-var BubbleSort = function(arr) {
-    var done = false;
-    var i = 0;
-    var c = 0;
-    while(!done) {
-        done = true;
-        i = 0;
-        for(i = 0; i < arr.length - 1; i++) {
-            // if the 1st is bigger than the 2nd element, swap them
-            if (arr[i] > arr[i+1]) {
-                var tmp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i+1] = tmp
-                done = false;
-            }
-        }
-        c = c + 1;
-    }
-    return arr;
-}
-
 var InsertSort6 = function(arr) {
     // var i; tmp, gap;
     var i, gap, tmp;
@@ -217,6 +196,31 @@ var InsertSort6 = function(arr) {
     return arr;
 }
 
+var BubbleSort = function(arr) {
+    var done = false;
+    var i = 0;
+    var c = 0;
+    while(!done) {
+        done = true;
+        i = 0;
+        for(i = 0; i < arr.length - 1; i++) {
+            // if the 1st is bigger than the 2nd element, swap them
+            if (arr[i] > arr[i+1]) {
+                var tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i+1] = tmp
+                done = false;
+            }
+        }
+        c = c + 1;
+    }
+    return arr;
+}
+
+var InsertSort6 = function(arr) {
+    return arr;
+}
+
 module.exports = {
     BubbleSort,
     BubbleSort2,
@@ -228,6 +232,7 @@ module.exports = {
     InsertSort4,
     InsertSort5,
     InsertSort6,
+    InsertSort7,
     AreArraysEqual
 }
 
