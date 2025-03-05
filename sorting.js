@@ -241,6 +241,19 @@ var BubbleSort = function(arr) {
 }
 
 var InsertSort8 = function(arr) {
+    var i, tmp, gap;
+    for (i = 1; i < arr.length; i++) {
+        tmp = arr[i];
+        gap = i - 1;
+        while (gap >= 0) {
+            if (arr[gap] < tmp) {
+                break;
+            }
+            arr[gap + 1] = arr[gap];
+            gap = gap - 1;
+        }
+        arr[gap + 1] = tmp;
+    }
     return arr;
 }
 
