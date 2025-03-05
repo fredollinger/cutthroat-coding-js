@@ -238,8 +238,6 @@ describe('TestInsertSort6', function() {
     var arr = [7, 6, 5, 4, 3, 2, 1];
     var expected = [1, 2, 3, 4, 5, 6, 7];
     var res = sorting.InsertSort6(arr);
-    console.log("TestInsert6: res      " + res);
-    console.log("TestInsert6: expected " + expected);
 
     it('Insert Sort 6', function(){
         assert(helper.ArraysAreEqual(res, expected));
@@ -254,7 +252,7 @@ describe('TestInsertSort7', function() {
     console.log("TestInsert7: res      " + res);
     console.log("TestInsert7: expected " + expected);
 
-    it('Insert Sort 7, function(){
+    it('Insert Sort 7', function(){
         assert(helper.ArraysAreEqual(res, expected));
     });
 
