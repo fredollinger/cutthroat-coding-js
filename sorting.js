@@ -174,7 +174,6 @@ var InsertSort6 = function(arr) {
     for (i = 1; i < len; i++) {
         gap = i - 1;
         tmp = arr[i];
-        console.log("Insert Sort 6: i: " + i + " tmp: " + tmp + " arr: " + arr);
         while(gap >= 0) {
             // if the number in the gap is lower than our current
             // tmp then break because we are all ready sorted at this point.
@@ -186,9 +185,6 @@ var InsertSort6 = function(arr) {
 	    gap = gap - 1;
         }
 
-        console.log("gap: " + gap);
-        console.log("tmp: " + tmp);
-        // console.log("arr: " + arr);
         arr[gap + 1] = tmp;
     }
     return arr;
@@ -199,7 +195,6 @@ var InsertSort7 = function(arr) {
     for (i = 1; i < arr.length; i++) {
         gap = i - 1;
         tmp = arr[i];
-        console.log("Insert Sort 7 i: " + i);
         // start at the current value and move down till we reach the 1st value in arr
         while(gap >= 0) {
             // if our tmp value is greater than our current value
@@ -257,6 +252,23 @@ var InsertSort8 = function(arr) {
     return arr;
 }
 
+var InsertSort9 = function(arr) {
+    var tmp, i, gap;
+    for (i = 1; i < arr.length; i++) {
+        gap = i - 1;
+        tmp = arr[i];
+        while (gap >= 0) {
+            if (arr[gap] < tmp) {
+                break;
+            }
+            arr[gap + 1] = arr[gap];
+            gap = gap - 1;
+        }
+        arr[gap + 1] = tmp;
+    }
+    return arr;
+}
+
 module.exports = {
     BubbleSort,
     BubbleSort2,
@@ -270,6 +282,7 @@ module.exports = {
     InsertSort6,
     InsertSort7,
     InsertSort8,
+    InsertSort9, 
     AreArraysEqual
 }
 
