@@ -252,17 +252,17 @@ var InsertSort8 = function(arr) {
     return arr;
 }
 
-var InsertSort9 = function(arr) {
-    var tmp, i, gap;
+var InsertSort10 = function(arr) {
+    var i, tmp, gap;
     for (i = 1; i < arr.length; i++) {
-        gap = i - 1;
         tmp = arr[i];
-        while (gap >= 0) {
+        gap = i - 1;
+        while (gap >=0) {
             if (arr[gap] < tmp) {
                 break;
-            }
+            } 
             arr[gap + 1] = arr[gap];
-            gap = gap - 1;
+            gap = gap - 1;  
         }
         arr[gap + 1] = tmp;
     }
@@ -282,7 +282,7 @@ module.exports = {
     InsertSort6,
     InsertSort7,
     InsertSort8,
-    InsertSort9, 
+    InsertSort10, 
     AreArraysEqual
 }
 

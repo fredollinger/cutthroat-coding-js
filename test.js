@@ -266,14 +266,14 @@ describe('TestInsertSort8', function() {
 
 });
 
-describe('TestInsertSort9', function() {
+describe('TestInsertSort', function() {
     var arr = [7, 6, 5, 4, 3, 2, 1];
     var expected = [1, 2, 3, 4, 5, 6, 7];
-    var res = sorting.InsertSort9(arr);
+    var res = sorting.InsertSort10(arr);
     console.log("TestInsert: res      " + res);
     console.log("TestInsert: expected " + expected);
 
-    it('Insert Sort 9', function(){
+    it('Insert Sort', function(){
         assert(helper.ArraysAreEqual(res, expected));
     });
 
